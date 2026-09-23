@@ -1,6 +1,20 @@
 # weather-checker1
-Checks the weather of any city in the world.
+Checks the current weather of any city in the world using the [OpenWeatherMap](https://openweathermap.org/) API.
 
-Uses an open-source API key from OpenWeatherMap.org to determine real-time weather-tracking data for this program.
+## Setup
+1. Install the dependencies:
+   ```
+   python3 -m pip install -r requirements.txt
+   ```
+2. Get a free API key from [OpenWeatherMap](https://home.openweathermap.org/api_keys).
+3. Create a file named `.env` in this folder containing:
+   ```
+   OPENWEATHERMAP_API_KEY=your_key_here
+   ```
+   `.env` is git-ignored, so your key stays out of the repository.
 
-.gitignore has been used to hide the .env file in which the API key is contained; users of this program need not worry about the actual code itself as the program can still access it.
+## Usage
+```
+python3 weather_map.py
+```
+Enter a city name when prompted to see its temperature, humidity, pressure, conditions, and wind speed.
